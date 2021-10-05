@@ -1,14 +1,12 @@
 require 'sinatra/base'
-# require 'sinatra/reloader'
+require 'sinatra/reloader'
 
 class Battle < Sinatra::Application
-  # configure :development do
-  #   register Sinatra::Reloader
-  # end
-
-  get '/' do
-    "Hello world! It's me"
+  configure :development do
+    register Sinatra::Reloader
   end
 
-  run! if app_file == $0
+  get '/' do
+    "Hello battle! It's battle time"
+  end
 end
