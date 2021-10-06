@@ -5,5 +5,6 @@ feature 'Testing infrastructure' do
     fill_in :player_2_name, with: "Beth"
     click_button 'Submit'
     expect(page).to have_content("Dan vs. Beth")
+    expect(page).to have_content("Player 2 HP: 20")
   end
 end
