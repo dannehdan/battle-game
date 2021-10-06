@@ -7,6 +7,6 @@ feature 'Testing infrastructure' do
 
   scenario 'Player 1 reduces Player 2s HP' do
     sign_in_and_play
-    expect { click_button 'Attack' }.to change { $player_2.hit_points }.by(-10)
+    expect { click_button 'Attack' }.to change { $game.player_2.hit_points }.by(-10)
   end
 end
